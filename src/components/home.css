@@ -1,0 +1,49 @@
+
+.dashContainer {
+    height : 150vh;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    background: rgb(244, 245, 248);
+    padding: 5px 10px;
+}
+
+
+.dashCardContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: calc(20% - 10px); 
+}
+
+
+@media (max-width: 1200px) {
+    .dashCardContainer {
+        width: calc(25% - 10px); 
+    }
+}
+
+@media (max-width: 900px) {
+    .dashCardContainer {
+        width: calc(33.33% - 10px); 
+    }
+}
+
+@media (max-width: 600px) {
+    .dashCardContainer {
+        width: calc(50% - 10px); 
+    }
+}
+
+@media (max-width: 400px) {
+    .dashCardContainer {
+        width: 100%; 
+    }
+}
+
+.space-even{
+    justify-content: space-evenly;
+}
