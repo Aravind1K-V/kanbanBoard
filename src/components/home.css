@@ -1,6 +1,6 @@
 
 .dashContainer {
-    height : 150vh;
+    height : 300vh;
     display: flex;
     align-items: flex-start;
     gap: 10px;
