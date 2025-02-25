@@ -26,7 +26,8 @@ const NavigationBar = () => {
 
   useEffect(() => {
     fetchData(currentGroup, currentOrder);
-  }, [currentGroup, currentOrder, fetchData]);
+  }, [currentGroup, currentOrder, fetchData]
+);
 
   return (
     <div className="padding-left-bottom">

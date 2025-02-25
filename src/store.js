@@ -22,54 +22,6 @@ const useStore = create((set, get) => ({
     }
   },
 
-//   selectData: (group, orderValue) => {
-//     const { allTickets, allUsers } = get();
-//     if (!allTickets.length) return;
-
-//     let selectedData = [];
-
-    
-//     if (group === 'status') {
-//       const statusMap = allTickets.reduce((acc, ticket) => {
-//         (acc[ticket.status] = acc[ticket.status] || []).push(ticket);
-//         return acc;
-//       }, {});
-//       selectedData = Object.entries(statusMap).map(([title, value]) => ({ title, value }));
-//     } else if (group === 'user') {
-//       const userMap = allTickets.reduce((acc, ticket) => {
-//         const user = allUsers.find(u => u.id === ticket.userId);
-//         if (user) {
-//           (acc[user.name] = acc[user.name] || []).push({
-//             ...ticket,
-//             available: user.available,
-//           });
-//         }
-//         return acc;
-//       }, {});
-//       selectedData = Object.entries(userMap).map(([title, value]) => ({ title, value }));
-//     } else {
-//       const priorList = ["No priority", "Low", "Medium", "High", "Urgent"];
-//       selectedData = priorList.map((priority, index) => ({
-//         title: priority,
-//         value: allTickets.filter((ticket) => ticket.priority === index)
-//       }));
-//     }
-
-//     if (orderValue === "title") {
-//       selectedData.forEach(data => {
-//         data.value.sort((a, b) => a.title.localeCompare(b.title));
-//       });
-//     } else if (orderValue === "priority") {
-//       selectedData.forEach(data => {
-//         data.value.sort((a, b) => b.priority - a.priority);
-//       });
-//     }
-
-//     set({ selectedData });
-//   },
-// }));
-
-// export default useStore;
 
 selectData: (group, orderValue) => {
   const { allTickets, allUsers } = get();
@@ -91,7 +43,7 @@ selectData: (group, orderValue) => {
       }
     });
 
-    // Convert statusMap to selectedData format
+    
     selectedData = statusList.map(status => ({
       title: status,
       value: statusMap[status]
@@ -103,7 +55,7 @@ selectData: (group, orderValue) => {
       if (user) {
         (acc[user.name] = acc[user.name] || []).push({
           ...ticket,
-          available: user.available, // Include the user's availability
+          available: user.available, 
         });
       }
       return acc;

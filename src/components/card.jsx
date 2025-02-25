@@ -6,16 +6,16 @@ const Card = ({ id, title, tag, available }) => {
     <div className="cardContainer flex-display-btn gap-5">
       <div className="cardHeading flex-sb">
         <span  className='color-grey text-uppercase'>{id}</span>
-        <div className="imageContainer relative" style={{ width: "30px", height: "30px" }}>
+        <div className="imageContainer relative width-height-30">
           <img
-            style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+            className='card-img'
             src="profile_img.jpg"
             alt="UserImage"
           />
           <div className={available ? 'showStatus-online' : 'showStatus-offline'}></div>
         </div>
       </div>
-      <div className="cardTitle" style={{ fontWeight: 200 }}>
+      <div className="cardTitle f-weight-200">
         <p>{title}</p>
       </div>
       <div className="cardTags">

@@ -61,3 +61,18 @@
 .text-uppercase{
     text-transform: uppercase;
 }
+
+.width-height-30{
+    width : 30px;
+    height : 30px;
+}
+
+.card-img{
+     width: 100%;
+     height: 100%;
+     border-radius: 50% 
+}
+
+.f-weight-200{
+    font-weight: 200;
+}
